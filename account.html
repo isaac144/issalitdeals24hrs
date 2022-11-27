@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>"All products - Issalit Deals 24 hours "</title>
+<link rel="stylesheet" href="style.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;1,700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</head>
+<body>
+
+<div class="container">
+
+    <div class="navbar">
+         <div class="logo">
+            <a href="products.html"><img src="images/logo 23.jpeg" width="100px" height="70px"></a>
+        </div>
+  <nav>
+      <ul id="MenuItems">  
+        <li><a href="products.html">Home</a></li>
+        <li><a href="productspage.html">products</a></li>
+        <li><a href="">About</a></li>
+        <li><a href="">Contact</a></li>
+        <li><a href="account.html">Account</a></li>
+        </ul> 
+  </nav>
+  <a href="cart.html"><img src="images/cart.png" width="30px" height="30px" class="cart"></a>
+  <img src="images/circled-menu.png" class="menu-icon" onclick="menutoggle()">
+</div>
+</div>  
+<!----------------------Account page---------->
+<div class="account-page">
+    <div class="container">
+        <div class="row">
+            <div class="col-2">
+                <img src="images/ssd43.webp" width="100%">
+            </div>
+            <div class="col-2">
+                <div class="form-container">
+                    <div class="form-btn">
+                        <span onclick="login()">Login</span>
+                        <span onclick="register()">Register</span>
+                        <hr id="Indicator">
+                    </div>
+                    <form id="Loginform">
+                        <input type="text" placeholder="Username">
+                        <input type="Password" placeholder="Password">
+                        <button type="submit" class="btn">Login</button>
+                        <a href="">Forgot password</a>
+                    </form>
+                    <form id="Regform">
+                        <input type="text" placeholder="Username">
+                        <input type="email" placeholder="email">
+                        <input type="Password" placeholder="Password">
+                        <button type="submit" class="btn">Register</button> 
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+   <!-----------footer----------->
+<div class="footer">
+    <div class="container">
+        <div class="row">
+            <div class="footer-col-1">
+                <h3>Download our App</h3>
+                <p>Download the App for Android and ios mobile phone   </p>
+                <div class="app-logo">
+                    <img src="images/playstore.png">
+                    <img src="images/apple-emblem.jpg">
+                </div>
+            </div>
+            <div class="footer-col-2">
+                <img src="images/logo 23.jpeg">
+                <p>Our pleasure is to deliver Quantity,quality,affordable,Available,Fast,Durable </p>
+            </div>
+            <div class="footer-col-3">
+                <h3>useful links</h3>
+                <ul>
+                    <li>Coupons</li>
+                    <li>Blog post</li>
+                    <li>Return policy</li>
+                    <li>Join Affiliate</li>
+                </ul>
+            </div>
+            <div class="footer-col-4">
+                <h3>Follow Us</h3>
+                <ul>
+                    <li>Facebook</li>
+                    <li>Twitter</li>
+                    <li>Instagram</li>
+                    <li>Youtube</li>
+                </ul>
+            </div>
+         </div>
+         <hr>
+         <p class="copyright">Copyright 2022 - Issalit Technologies@254Kenya</p>
+    </div>
+</div>
+<!--------------Js for toggle Menu------------->
+<script>
+    var MenuItems = document.getElementById("MenuItems");
+    MenuItems.style.maxHeight = "0px";
+    function menutoggle()
+    {
+        if(MenuItems.style.maxHeight == "0px")
+        {
+            MenuItems.style.maxHeight = "200px";
+        }
+        else
+        {
+            MenuItems.style.maxHeight = "0px";
+        }
+    }
+</script>
+<!--------------Js for toggle form------------->
+<script>
+    var Loginform = document.getElementById("Loginform");
+    var Regform = document.getElementById("Regform");
+    var Indicator = document.getElementById("Indicator");
+    function register(){
+
+    Regform.style.transform = "translateX(0px)";
+    Loginform.style.transform = "translateX(0px)";
+    Indicator.style.transform = "translateX(100px)";
+    }
+
+    function login(){
+
+Regform.style.transform = "translateX(300px)";
+Loginform.style.transform = "translateX(300px)";
+Indicator.style.transform = "translateX(0px)";
+}
+</script>
+
+
+</body>
+</html>
